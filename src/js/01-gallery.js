@@ -4,11 +4,11 @@ console.log(galleryItems);
 import { galleryItems } from './gallery-items';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"
 // Change code below this line
 
 console.log(galleryItems);
-console.log(SimpleLightbox);
-console.log(SimpleLightbox);
+console.log(SimpleLightbox);console.log(SimpleLightbox);
 
 
 const galleryContainer = document.querySelector('.gallery')
@@ -31,8 +31,7 @@ const galleryContainer = document.querySelector('.gallery')
     };
     console.log(createGalleryItem);
 
-    //  const lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250,});
-    //  lightbox.on('show.simplelightbox')
+      const gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250,});
+      gallery.on('show.simplelightbox')
 
-    const gallery = new SimpleLightbox('.some-element a', {captionsData: 'alt', captionDelay: 250,});
-    gallery.on('show.simplelightbox')
+   
